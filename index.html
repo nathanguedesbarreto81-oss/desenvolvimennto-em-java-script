@@ -1,29 +1,35 @@
+<!--- index.html----->
+
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculadora</title>
+    <title>Editor de Mensagem</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
-
 <body>
-    <div class="calculadora">
-        <h1>calculadora</h1>
 
-        <input type="text" id="n1">
-        <input type="text" id="n2">
 
-        <button onclick="soma()">mais</button>
-        <button onclick="sub()">menos</button>
-        <button onclick="sub()">subtração</button>
-        <button onclick="mutiplicacao()">multiplicação</button>
+    <h1>Editor de Mensagem</h1>
 
-    </div>
-    <div id="resultado">=</div>
 
+    <input type="text" id="texto" placeholder="Digite sua mensagem">
+
+
+    <input type="color" id="cor">
+
+
+    <br><br>
+
+
+    <button id="btnExibir">Exibir</button>
+    <button id="btnLimpar">Limpar</button>
+
+
+    <p id="resultado"></p>
+
+
+    <script src="script.js"></script>
 </body>
-
 </html>
+

@@ -1,35 +1,20 @@
+script.js
+
+let campoTexto = document.getElementById("texto");
+let campoCor = document.getElementById("cor");
+let resultado = document.getElementById("resultado");
 
 
-function soma(){
-let numero1=document.getElementById("n1").value
-let numero2=document.getElementById("n2").value
-
-resultado = parseFloat(numero1)+parseFloat(numero2)
-document.getElementById("resultado").innerHTML=resultado
-}
-
-function sub(){
-let numero1=document.getElementById("n1").value
-let numero2=document.getElementById("n2").value
-
-resultado = parseFloat(numero1)-parseFloat(numero2)
-document.getElementById("resultado").innerHTML=resultado
-}
-
-function sub(){
-let numero1=document.getElementById("n1").value
-let numero2=document.getElementById("n2").value
-
-resultado = parseFloat(numero1)/parseFloat(numero2)
-document.getElementById("resultado").innerHTML=resultado
-}
+let botaoExibir = document.getElementById("btnExibir");
+let botaoLimpar = document.getElementById("btnLimpar");
 
 
-function mutiplicacao(){
-let numero1=document.getElementById("n1").value
-let numero2=document.getElementById("n2").value
+botaoExibir.addEventListener("click", function () {
+    resultado.innerText = campoTexto.value;
+    resultado.style.color = campoCor.value;
+});
 
-resultado = parseFloat(numero1)*parseFloat(numero2)
-document.getElementById("resultado").innerHTML=resultado
-}
 
+botaoLimpar.addEventListener("click", function () {
+    resultado.innerText = "";
+});
