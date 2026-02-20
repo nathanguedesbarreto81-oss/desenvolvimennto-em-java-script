@@ -1,13 +1,96 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Classificador de Triângulos do Nathan</title>
 </head>
 <body>
-    <script src="script.js"></script>
-    <input type="text">
-    <button type="submit" id= 'btn'></button>
-</body>
+<div class="triangulo">
+
+<p>Criado por Nathan Guedes</p>
+    <h1>Classificador de Triângulos</h1>
+
+    <p>Digite os 3 lados do Triângulos:</p>
+  
+    Lado 1: <input type="text" id="lado1"><br><br>
+    Lado 2: <input type="text" id="lado2"><br><br>
+    Lado 3: <input type="text" id="lado3"><br><br>
+  
+    <button onclick="verificar()">Verificar</button>
+  
+    <p id="resposta"></p>
+  
+    <script>
+  
+  console.log(prompt('Descubra os triangulos'))
+      function verificar() {
+  
+        let ladoA = document.getElementById("lado1").value;
+   
+        const ladob = document.getElementById("lado2").value;
+        
+        var ladoC = document.getElementById("lado3").value;
+  
+        ladoA = Number(ladoA);
+        ladoB= Number(ladob);
+        ladoC = Number(ladoC);
+  
+        
+        let mensagem = "lados a b c";
+  
+  
+        if (ladoA <= 0 || ladoB <= 0 || ladoC <= 0)
+        
+        
+        {
+          mensagem = "Digite números maiores que zero!";
+        }
+  
+  
+  
+        else if (ladoA + ladoB <= ladoC || ladoA + ladoC <= ladoB || ladoB + ladoC <= ladoA) {
+          mensagem = "Não forma triângulo!";
+        
+      }
+  
+        else if (ladoA === ladoB && ladoB === ladoC) {
+          mensagem = "TRIANGULO EQUILATERO";
+        }
+        else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+          mensagem = "TRIANGULO ICOCELES";
+        }
+        else {
+          mensagem = "Triângulo ESCALENO";
+        }
+  
+        document.getElementById("resposta").innerText = mensagem;
+      }
+  
+    </script>
+
+
+
+</div>
+  <style>
+
+.triangulo{
+
+
+text-align: center;
+
+background-color: aquamarine
+;
+
+margin: 0%;
+display: block;
+}
+*{
+
+
+}
+
+
+
+
+  </style>
 </html>
